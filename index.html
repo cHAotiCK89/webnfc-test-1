@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>NFC Reader</title>
+</head>
+<body>
+
+  <h1>NFC Reader</h1>
+
+  <p id="nfc-messages"></p>
+
+  <script>
+
+    // NFC読み取りコード
+
+    const paragraph = document.getElementById("nfc-messages");
+
+    ndefReader.onreading = event => {
+      const message = event.message;
+      paragraph.textContent += `\n${message}`;
+    }
+
+  </script>
+
+</body>
+</html>
